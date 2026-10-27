@@ -1,0 +1,51 @@
+body {
+  background-color: #880461;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Alinea el texto del encabezado al centro. */
+h1 {
+  text-align: center;
+}
+
+/* Establece el ancho del acordeón. */
+.acordeon {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: rgb(246, 129, 230);
+  padding: 45px 45px;
+}
+
+/* ----- Lo nuevo ----- */
+
+/* El título de cada sección */
+.label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* El signo + a la derecha */
+.label::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+}
+
+/* Cuando está abierto, el signo cambia a - */
+.contenedor.activa .label::after {
+  content: "-";
+}
+
+/* El contenido está oculto al inicio */
+.content {
+  display: none;
+  padding: 10px 0;
+}
+
+/* Cuando el contenedor tiene la clase activa, se muestra */
+.contenedor.activa .content {
+  display: block;
+}
